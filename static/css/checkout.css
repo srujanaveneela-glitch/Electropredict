@@ -1,0 +1,43 @@
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 28px
+}
+
+.checkout-form {
+    display: grid;
+    gap: 15px
+}
+
+.order-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: .88rem
+}
+
+.success-box {
+    max-width: 620px;
+    margin: auto;
+    text-align: center;
+    padding: 55px
+}
+
+.success-icon {
+    display: grid;
+    place-items: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #ddf6e9;
+    color: var(--success);
+    font-size: 1.8rem
+}
+
+@media(max-width:750px) {
+    .checkout-layout {
+        grid-template-columns: 1fr
+    }
+}

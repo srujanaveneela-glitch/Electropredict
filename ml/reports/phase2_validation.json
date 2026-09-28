@@ -1,0 +1,227 @@
+{
+  "dataset_path": "D:\\SRUJANA\\Term Paper\\ElectroPredict\\electropredict.csv",
+  "output_path": "D:\\SRUJANA\\Term Paper\\ElectroPredict\\ml\\data\\phase2_training.csv.gz",
+  "read_metadata": {
+    "valid_pandas_rows": 2633521,
+    "valid_electronics_rows": 234664,
+    "pandas_bad_records": 0
+  },
+  "valid_electronics_orders": 200003,
+  "users_considered": 130308,
+  "users_with_at_least_two_electronics_orders": 34348,
+  "supervised_prediction_samples": 69695,
+  "samples_removed_no_future_purchase": 130308,
+  "samples_removed_insufficient_history": 0,
+  "order_level_metadata": {
+    "deduplicated_electronics_rows": 234396,
+    "exact_duplicate_electronics_rows_removed": 268,
+    "multi_category_orders": 13947
+  },
+  "target_category_decision": {
+    "minimum_target_count": 100,
+    "raw_order_category_counts": {
+      "audio": 17048,
+      "camera": 450,
+      "computer_components": 11173,
+      "computer_peripherals": 18112,
+      "desktop": 924,
+      "gaming": 137,
+      "laptop_notebook": 23131,
+      "other_electronics": 6140,
+      "smartphone": 93114,
+      "smartwatch_clocks": 5668,
+      "tablet": 5821,
+      "telephone": 2119,
+      "video": 16166
+    },
+    "raw_target_category_counts": {
+      "audio": 5469,
+      "camera": 230,
+      "computer_components": 4518,
+      "computer_peripherals": 6147,
+      "desktop": 342,
+      "gaming": 52,
+      "laptop_notebook": 8761,
+      "other_electronics": 1995,
+      "smartphone": 32141,
+      "smartwatch_clocks": 2183,
+      "tablet": 2061,
+      "telephone": 606,
+      "video": 5190
+    },
+    "rare_categories_merged": [
+      "gaming"
+    ],
+    "final_order_category_counts": {
+      "audio": 17048,
+      "camera": 450,
+      "computer_components": 11173,
+      "computer_peripherals": 18112,
+      "desktop": 924,
+      "laptop_notebook": 23131,
+      "other_electronics": 6277,
+      "smartphone": 93114,
+      "smartwatch_clocks": 5668,
+      "tablet": 5821,
+      "telephone": 2119,
+      "video": 16166
+    }
+  },
+  "final_target_categories": [
+    "audio",
+    "camera",
+    "computer_components",
+    "computer_peripherals",
+    "desktop",
+    "laptop_notebook",
+    "other_electronics",
+    "smartphone",
+    "smartwatch_clocks",
+    "tablet",
+    "telephone",
+    "video"
+  ],
+  "target_distribution": [
+    {
+      "category": "audio",
+      "count": 5469,
+      "percentage": 7.847
+    },
+    {
+      "category": "camera",
+      "count": 230,
+      "percentage": 0.33
+    },
+    {
+      "category": "computer_components",
+      "count": 4518,
+      "percentage": 6.4825
+    },
+    {
+      "category": "computer_peripherals",
+      "count": 6147,
+      "percentage": 8.8199
+    },
+    {
+      "category": "desktop",
+      "count": 342,
+      "percentage": 0.4907
+    },
+    {
+      "category": "laptop_notebook",
+      "count": 8761,
+      "percentage": 12.5705
+    },
+    {
+      "category": "other_electronics",
+      "count": 2047,
+      "percentage": 2.9371
+    },
+    {
+      "category": "smartphone",
+      "count": 32141,
+      "percentage": 46.1167
+    },
+    {
+      "category": "smartwatch_clocks",
+      "count": 2183,
+      "percentage": 3.1322
+    },
+    {
+      "category": "tablet",
+      "count": 2061,
+      "percentage": 2.9572
+    },
+    {
+      "category": "telephone",
+      "count": 606,
+      "percentage": 0.8695
+    },
+    {
+      "category": "video",
+      "count": 5190,
+      "percentage": 7.4467
+    }
+  ],
+  "feature_column_count": 42,
+  "feature_columns": [
+    "history_order_count",
+    "history_purchase_count",
+    "previous_total_spend",
+    "previous_average_order_spend",
+    "previous_min_order_spend",
+    "previous_max_order_spend",
+    "previous_average_item_price",
+    "previous_unique_product_count",
+    "previous_unique_brand_count",
+    "days_since_previous_order",
+    "average_days_between_orders",
+    "previous_category_diversity",
+    "previous_category",
+    "most_frequent_previous_category",
+    "previous_brand",
+    "previous_product",
+    "previous_orders_last_30_days",
+    "previous_orders_last_90_days",
+    "previous_category_count__audio",
+    "previous_category_proportion__audio",
+    "previous_category_count__camera",
+    "previous_category_proportion__camera",
+    "previous_category_count__computer_components",
+    "previous_category_proportion__computer_components",
+    "previous_category_count__computer_peripherals",
+    "previous_category_proportion__computer_peripherals",
+    "previous_category_count__desktop",
+    "previous_category_proportion__desktop",
+    "previous_category_count__laptop_notebook",
+    "previous_category_proportion__laptop_notebook",
+    "previous_category_count__other_electronics",
+    "previous_category_proportion__other_electronics",
+    "previous_category_count__smartphone",
+    "previous_category_proportion__smartphone",
+    "previous_category_count__smartwatch_clocks",
+    "previous_category_proportion__smartwatch_clocks",
+    "previous_category_count__tablet",
+    "previous_category_proportion__tablet",
+    "previous_category_count__telephone",
+    "previous_category_proportion__telephone",
+    "previous_category_count__video",
+    "previous_category_proportion__video"
+  ],
+  "audit_columns": [
+    "history_end_order_id",
+    "history_end_timestamp",
+    "target_order_id",
+    "prediction_timestamp"
+  ],
+  "audit_columns_excluded_from_features": true,
+  "target_order_columns_excluded_from_features": true,
+  "missing_values_in_final_features": {},
+  "duplicate_training_samples": 0,
+  "exact_duplicate_supervised_samples": 0,
+  "repeated_feature_signature_rows": 19368,
+  "duplicate_investigation": {
+    "exact_identity_columns": [
+      "user_id",
+      "history_end_order_id",
+      "history_end_timestamp",
+      "target_order_id",
+      "prediction_timestamp",
+      "next_purchase_category"
+    ],
+    "feature_signature_columns_exclude_user_and_audit_identity": true,
+    "interpretation": "Repeated feature signatures with distinct user/order audit identity are legitimate repeated historical states; exact identity duplicates are duplicate supervised samples."
+  },
+  "prediction_timestamp_range": {
+    "earliest": "2020-01-05T06:27:32+00:00",
+    "latest": "2020-11-21T10:10:01+00:00"
+  },
+  "features_only_before_target_purchase": true,
+  "no_target_order_information_in_features": true,
+  "remaining_data_quality_concerns": [
+    "The primary category of a multi-category order is selected by line count, then spend, then category name.",
+    "A minimum history of one complete electronics order is required; users with one order have no supervised sample.",
+    "Rare order categories below the configured threshold are merged into other_electronics.",
+    "Categorical history fields are retained as strings for later model preprocessing."
+  ]
+}

@@ -1,0 +1,665 @@
+{
+  "dataset_path": "D:\\SRUJANA\\Term Paper\\ElectroPredict\\electropredict.csv",
+  "raw_rows_processed": 2633521,
+  "valid_rows_parsed_by_pandas": 2633521,
+  "pandas_bad_records": 0,
+  "quality_counts": {
+    "missing_user_id": 2069352,
+    "missing_category_code": 612202,
+    "missing_brand": 506005,
+    "missing_or_invalid_price": 431954,
+    "non_positive_price": 121,
+    "invalid_dates": 19631,
+    "numeric_category_code": 431954,
+    "exact_duplicate_rows_after_parsing": 675
+  },
+  "electronics_filter": {
+    "valid_electronics_rows": 234664,
+    "excluded_non_electronics_or_unusable_rows": 2398857,
+    "usable_unique_users": 130308,
+    "usable_date_range_utc": {
+      "min": "2020-01-05T04:06:18+00:00",
+      "max": "2020-11-21T10:10:13+00:00"
+    }
+  },
+  "category_distribution": [
+    {
+      "target_category": "smartphone",
+      "record_count": 102551,
+      "percentage_of_usable_electronics": 43.7012,
+      "original_category_codes": [
+        {
+          "category_code": "electronics.smartphone",
+          "record_count": 102551
+        }
+      ]
+    },
+    {
+      "target_category": "laptop_notebook",
+      "record_count": 25917,
+      "percentage_of_usable_electronics": 11.0443,
+      "original_category_codes": [
+        {
+          "category_code": "computers.notebook",
+          "record_count": 25917
+        }
+      ]
+    },
+    {
+      "target_category": "computer_peripherals",
+      "record_count": 25518,
+      "percentage_of_usable_electronics": 10.8743,
+      "original_category_codes": [
+        {
+          "category_code": "computers.peripherals.mouse",
+          "record_count": 12662
+        },
+        {
+          "category_code": "computers.peripherals.keyboard",
+          "record_count": 3808
+        },
+        {
+          "category_code": "computers.peripherals.printer",
+          "record_count": 3465
+        },
+        {
+          "category_code": "computers.peripherals.monitor",
+          "record_count": 3278
+        },
+        {
+          "category_code": "computers.peripherals.joystick",
+          "record_count": 1188
+        },
+        {
+          "category_code": "computers.peripherals.camera",
+          "record_count": 1043
+        },
+        {
+          "category_code": "computers.peripherals.scanner",
+          "record_count": 74
+        }
+      ]
+    },
+    {
+      "target_category": "audio",
+      "record_count": 21634,
+      "percentage_of_usable_electronics": 9.2191,
+      "original_category_codes": [
+        {
+          "category_code": "electronics.audio.headphone",
+          "record_count": 20055
+        },
+        {
+          "category_code": "electronics.audio.microphone",
+          "record_count": 1062
+        },
+        {
+          "category_code": "electronics.audio.acoustic",
+          "record_count": 435
+        },
+        {
+          "category_code": "electronics.audio.subwoofer",
+          "record_count": 70
+        },
+        {
+          "category_code": "electronics.audio.dictaphone",
+          "record_count": 12
+        }
+      ]
+    },
+    {
+      "target_category": "video",
+      "record_count": 17740,
+      "percentage_of_usable_electronics": 7.5597,
+      "original_category_codes": [
+        {
+          "category_code": "electronics.video.tv",
+          "record_count": 17625
+        },
+        {
+          "category_code": "electronics.video.projector",
+          "record_count": 115
+        }
+      ]
+    },
+    {
+      "target_category": "computer_components",
+      "record_count": 17419,
+      "percentage_of_usable_electronics": 7.423,
+      "original_category_codes": [
+        {
+          "category_code": "computers.components.hdd",
+          "record_count": 5066
+        },
+        {
+          "category_code": "computers.components.cpu",
+          "record_count": 4139
+        },
+        {
+          "category_code": "computers.components.cooler",
+          "record_count": 3374
+        },
+        {
+          "category_code": "computers.components.memory",
+          "record_count": 1603
+        },
+        {
+          "category_code": "computers.components.videocards",
+          "record_count": 1197
+        },
+        {
+          "category_code": "computers.components.power_supply",
+          "record_count": 990
+        },
+        {
+          "category_code": "computers.components.motherboard",
+          "record_count": 865
+        },
+        {
+          "category_code": "computers.components.cdrw",
+          "record_count": 159
+        },
+        {
+          "category_code": "computers.components.sound_card",
+          "record_count": 26
+        }
+      ]
+    },
+    {
+      "target_category": "other_electronics",
+      "record_count": 6905,
+      "percentage_of_usable_electronics": 2.9425,
+      "original_category_codes": [
+        {
+          "category_code": "computers.network.router",
+          "record_count": 6473
+        },
+        {
+          "category_code": "computers.ebooks",
+          "record_count": 397
+        },
+        {
+          "category_code": "electronics.calculator",
+          "record_count": 35
+        }
+      ]
+    },
+    {
+      "target_category": "smartwatch_clocks",
+      "record_count": 6468,
+      "percentage_of_usable_electronics": 2.7563,
+      "original_category_codes": [
+        {
+          "category_code": "electronics.clocks",
+          "record_count": 6468
+        }
+      ]
+    },
+    {
+      "target_category": "tablet",
+      "record_count": 6393,
+      "percentage_of_usable_electronics": 2.7243,
+      "original_category_codes": [
+        {
+          "category_code": "electronics.tablet",
+          "record_count": 6393
+        }
+      ]
+    },
+    {
+      "target_category": "telephone",
+      "record_count": 2435,
+      "percentage_of_usable_electronics": 1.0377,
+      "original_category_codes": [
+        {
+          "category_code": "electronics.telephone",
+          "record_count": 2435
+        }
+      ]
+    },
+    {
+      "target_category": "desktop",
+      "record_count": 1040,
+      "percentage_of_usable_electronics": 0.4432,
+      "original_category_codes": [
+        {
+          "category_code": "computers.desktop",
+          "record_count": 1040
+        }
+      ]
+    },
+    {
+      "target_category": "camera",
+      "record_count": 480,
+      "percentage_of_usable_electronics": 0.2045,
+      "original_category_codes": [
+        {
+          "category_code": "electronics.camera.photo",
+          "record_count": 347
+        },
+        {
+          "category_code": "electronics.camera.video",
+          "record_count": 133
+        }
+      ]
+    },
+    {
+      "target_category": "gaming",
+      "record_count": 164,
+      "percentage_of_usable_electronics": 0.0699,
+      "original_category_codes": [
+        {
+          "category_code": "computers.gaming",
+          "record_count": 164
+        }
+      ]
+    }
+  ],
+  "top_observed_category_codes": [
+    {
+      "category_code": "electronics.smartphone",
+      "record_count": 357682
+    },
+    {
+      "category_code": "appliances.kitchen.refrigerators",
+      "record_count": 77386
+    },
+    {
+      "category_code": "16.18",
+      "record_count": 72969
+    },
+    {
+      "category_code": "electronics.video.tv",
+      "record_count": 71711
+    },
+    {
+      "category_code": "computers.notebook",
+      "record_count": 71436
+    },
+    {
+      "category_code": "appliances.environment.vacuum",
+      "record_count": 66471
+    },
+    {
+      "category_code": "electronics.audio.headphone",
+      "record_count": 66159
+    },
+    {
+      "category_code": "appliances.kitchen.kettle",
+      "record_count": 62719
+    },
+    {
+      "category_code": "appliances.kitchen.washer",
+      "record_count": 56255
+    },
+    {
+      "category_code": "furniture.kitchen.table",
+      "record_count": 55725
+    },
+    {
+      "category_code": "computers.peripherals.mouse",
+      "record_count": 45329
+    },
+    {
+      "category_code": "57.87",
+      "record_count": 45149
+    },
+    {
+      "category_code": "8.10",
+      "record_count": 42411
+    },
+    {
+      "category_code": "9.26",
+      "record_count": 40911
+    },
+    {
+      "category_code": "appliances.iron",
+      "record_count": 40209
+    },
+    {
+      "category_code": "29.63",
+      "record_count": 38787
+    },
+    {
+      "category_code": "appliances.kitchen.blender",
+      "record_count": 36697
+    },
+    {
+      "category_code": "appliances.personal.scales",
+      "record_count": 32910
+    },
+    {
+      "category_code": "appliances.kitchen.hood",
+      "record_count": 32133
+    },
+    {
+      "category_code": "appliances.kitchen.microwave",
+      "record_count": 29259
+    },
+    {
+      "category_code": "appliances.environment.air_conditioner",
+      "record_count": 28481
+    },
+    {
+      "category_code": "stationery.battery",
+      "record_count": 24940
+    },
+    {
+      "category_code": "computers.network.router",
+      "record_count": 23881
+    },
+    {
+      "category_code": "6.94",
+      "record_count": 20591
+    },
+    {
+      "category_code": "4.63",
+      "record_count": 20403
+    },
+    {
+      "category_code": "appliances.kitchen.meat_grinder",
+      "record_count": 19875
+    },
+    {
+      "category_code": "electronics.tablet",
+      "record_count": 19601
+    },
+    {
+      "category_code": "furniture.living_room.cabinet",
+      "record_count": 17056
+    },
+    {
+      "category_code": "electronics.clocks",
+      "record_count": 15987
+    },
+    {
+      "category_code": "appliances.environment.water_heater",
+      "record_count": 15982
+    },
+    {
+      "category_code": "furniture.kitchen.chair",
+      "record_count": 14966
+    },
+    {
+      "category_code": "computers.components.cpu",
+      "record_count": 14111
+    },
+    {
+      "category_code": "accessories.bag",
+      "record_count": 13586
+    },
+    {
+      "category_code": "furniture.living_room.shelving",
+      "record_count": 13209
+    },
+    {
+      "category_code": "appliances.kitchen.oven",
+      "record_count": 13201
+    },
+    {
+      "category_code": "furniture.bedroom.pillow",
+      "record_count": 13142
+    },
+    {
+      "category_code": "10.42",
+      "record_count": 12827
+    },
+    {
+      "category_code": "appliances.kitchen.mixer",
+      "record_count": 12447
+    },
+    {
+      "category_code": "electronics.telephone",
+      "record_count": 12040
+    },
+    {
+      "category_code": "computers.components.hdd",
+      "record_count": 11750
+    },
+    {
+      "category_code": "13.87",
+      "record_count": 11075
+    },
+    {
+      "category_code": "computers.components.cooler",
+      "record_count": 11009
+    },
+    {
+      "category_code": "computers.peripherals.printer",
+      "record_count": 10900
+    },
+    {
+      "category_code": "construction.tools.screw",
+      "record_count": 10883
+    },
+    {
+      "category_code": "appliances.personal.hair_cutter",
+      "record_count": 10778
+    },
+    {
+      "category_code": "stationery.cartrige",
+      "record_count": 10718
+    },
+    {
+      "category_code": "computers.peripherals.keyboard",
+      "record_count": 10601
+    },
+    {
+      "category_code": "appliances.environment.fan",
+      "record_count": 9881
+    },
+    {
+      "category_code": "92.59",
+      "record_count": 9865
+    },
+    {
+      "category_code": "appliances.ironing_board",
+      "record_count": 9517
+    },
+    {
+      "category_code": "69.44",
+      "record_count": 8710
+    },
+    {
+      "category_code": "17.36",
+      "record_count": 8211
+    },
+    {
+      "category_code": "appliances.environment.air_heater",
+      "record_count": 7847
+    },
+    {
+      "category_code": "appliances.kitchen.dishwasher",
+      "record_count": 7698
+    },
+    {
+      "category_code": "appliances.sewing_machine",
+      "record_count": 7547
+    },
+    {
+      "category_code": "computers.peripherals.monitor",
+      "record_count": 7049
+    },
+    {
+      "category_code": "3.89",
+      "record_count": 6997
+    },
+    {
+      "category_code": "appliances.personal.massager",
+      "record_count": 6569
+    },
+    {
+      "category_code": "appliances.kitchen.toster",
+      "record_count": 5390
+    },
+    {
+      "category_code": "appliances.kitchen.juicer",
+      "record_count": 5313
+    },
+    {
+      "category_code": "11.57",
+      "record_count": 4983
+    },
+    {
+      "category_code": "apparel.glove",
+      "record_count": 4710
+    },
+    {
+      "category_code": "appliances.kitchen.grill",
+      "record_count": 4465
+    },
+    {
+      "category_code": "30.09",
+      "record_count": 4419
+    },
+    {
+      "category_code": "3.47",
+      "record_count": 4397
+    },
+    {
+      "category_code": "appliances.kitchen.coffee_machine",
+      "record_count": 4073
+    },
+    {
+      "category_code": "0.00",
+      "record_count": 3721
+    },
+    {
+      "category_code": "stationery.paper",
+      "record_count": 3700
+    },
+    {
+      "category_code": "computers.peripherals.joystick",
+      "record_count": 3544
+    },
+    {
+      "category_code": "appliances.kitchen.coffee_grinder",
+      "record_count": 3487
+    },
+    {
+      "category_code": "medicine.tools.tonometer",
+      "record_count": 3386
+    },
+    {
+      "category_code": "23.15",
+      "record_count": 3237
+    },
+    {
+      "category_code": "0.97",
+      "record_count": 3161
+    },
+    {
+      "category_code": "0.42",
+      "record_count": 2906
+    },
+    {
+      "category_code": "electronics.audio.microphone",
+      "record_count": 2841
+    },
+    {
+      "category_code": "0.81",
+      "record_count": 2585
+    },
+    {
+      "category_code": "computers.desktop",
+      "record_count": 2495
+    },
+    {
+      "category_code": "5.79",
+      "record_count": 2433
+    },
+    {
+      "category_code": "furniture.bedroom.bed",
+      "record_count": 2399
+    },
+    {
+      "category_code": "kids.skates",
+      "record_count": 2360
+    },
+    {
+      "category_code": "25.46",
+      "record_count": 2298
+    },
+    {
+      "category_code": "1.16",
+      "record_count": 2260
+    },
+    {
+      "category_code": "computers.components.memory",
+      "record_count": 2243
+    },
+    {
+      "category_code": "computers.peripherals.camera",
+      "record_count": 2239
+    },
+    {
+      "category_code": "37.04",
+      "record_count": 2198
+    },
+    {
+      "category_code": "18.29",
+      "record_count": 2178
+    },
+    {
+      "category_code": "0.93",
+      "record_count": 2134
+    },
+    {
+      "category_code": "11.55",
+      "record_count": 1966
+    },
+    {
+      "category_code": "18.98",
+      "record_count": 1949
+    },
+    {
+      "category_code": "furniture.living_room.chair",
+      "record_count": 1929
+    },
+    {
+      "category_code": "0.67",
+      "record_count": 1916
+    },
+    {
+      "category_code": "electronics.audio.acoustic",
+      "record_count": 1867
+    },
+    {
+      "category_code": "34.72",
+      "record_count": 1867
+    },
+    {
+      "category_code": "0.35",
+      "record_count": 1840
+    },
+    {
+      "category_code": "kids.toys",
+      "record_count": 1751
+    },
+    {
+      "category_code": "apparel.tshirt",
+      "record_count": 1743
+    },
+    {
+      "category_code": "50.93",
+      "record_count": 1702
+    },
+    {
+      "category_code": "appliances.kitchen.steam_cooker",
+      "record_count": 1616
+    },
+    {
+      "category_code": "computers.components.videocards",
+      "record_count": 1558
+    },
+    {
+      "category_code": "28.94",
+      "record_count": 1549
+    }
+  ],
+  "target_design": {
+    "target": "next_purchase_category",
+    "rare_class_threshold_records": 100,
+    "rare_class_policy": "Review classes below the threshold; merge defensible electronic classes into other_electronics or exclude them from a stable multiclass target."
+  }
+}

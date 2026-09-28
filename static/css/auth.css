@@ -1,0 +1,32 @@
+.auth-shell {
+    display: grid;
+    place-items: center;
+    min-height: calc(100vh - 225px);
+    padding: 55px 0;
+    background: var(--soft)
+}
+
+.auth-card {
+    width: min(460px, 100%);
+    padding: 30px
+}
+
+.auth-card h1 {
+    margin-top: 0
+}
+
+.auth-form {
+    display: grid;
+    gap: 16px
+}
+
+.auth-note {
+    color: var(--muted);
+    font-size: .82rem;
+    text-align: center
+}
+
+.auth-link {
+    color: var(--blue);
+    font-weight: bold
+}

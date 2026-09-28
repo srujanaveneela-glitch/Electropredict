@@ -1,0 +1,85 @@
+{
+  "phase": 5,
+  "provider": "Google Gemini",
+  "api_key_environment_variable": "GEMINI_API_KEY",
+  "api_key_configured": true,
+  "prediction_source": "saved Phase 3 RandomForestClassifier",
+  "evidence_source": "D:\\SRUJANA\\Term Paper\\ElectroPredict\\ml\\reports\\phase4_shap_validation.json",
+  "prediction_change_allowed": false,
+  "shap_values_change_allowed": false,
+  "prompt_contains_anti_fabrication_rules": true,
+  "result": {
+    "status": "success",
+    "model": "gemini-3.6-flash",
+    "prompt_sent": true,
+    "explanation": "**Model Prediction**\nPredicted Category: other_electronics  \nPrediction Probability: 0.7462565538721944  \n\n**Explanation of Prediction**\nThe machine-learning model reached this prediction based on several observational factors. The explanation below outlines how specific feature values influenced the model's likelihood calculation.\n\n**Factors pushing the model toward predicting \"other_electronics\":**\n* **previous_category** (\"other_electronics\"): Added +0.14584873073557075 to the model score.\n* **most_frequent_previous_category** (\"other_electronics\"): Added +0.10815509964822467 to the model score.\n* **previous_category_proportion__other_electronics** (1.0): Added +0.10413594601711651 to the model score.\n* **previous_category_count__other_electronics** (1): Added +0.06527766924963331 to the model score.\n* **previous_brand** (\"altel\"): Added +0.04318139636879913 to the model score.\n* **previous_product** (\"1515966223509089687\"): Added +0.023156266379741282 to the model score.\n* **previous_average_order_spend** (41.64): Added +0.018265133185578934 to the model score.\n* **previous_average_item_price** (41.64): Added +0.015486333900030687 to the model score.\n* **previous_min_order_spend** (41.64): Added +0.015290423733168695 to the model score.\n* **previous_category_proportion__smartphone** (0.0): Added +0.014558543794713472 to the model score.\n\n**Factors pushing the model away from predicting \"other_electronics\":**\n* **previous_orders_last_90_days** (1): Subtracted -0.000377212300924441 from the model score.\n* **average_days_between_orders** (0.0): Subtracted -0.00015884722101574766 from the model score.\n\nPlease note that this is a model association, not a guaranteed purchase.",
+    "model_prediction": {
+      "predicted_category": "other_electronics",
+      "prediction_probability": 0.7462565538721944,
+      "top_positive_contributors": [
+        {
+          "feature": "previous_category",
+          "feature_value": "other_electronics",
+          "shap_value": 0.14584873073557075
+        },
+        {
+          "feature": "most_frequent_previous_category",
+          "feature_value": "other_electronics",
+          "shap_value": 0.10815509964822467
+        },
+        {
+          "feature": "previous_category_proportion__other_electronics",
+          "feature_value": 1.0,
+          "shap_value": 0.10413594601711651
+        },
+        {
+          "feature": "previous_category_count__other_electronics",
+          "feature_value": 1,
+          "shap_value": 0.06527766924963331
+        },
+        {
+          "feature": "previous_brand",
+          "feature_value": "altel",
+          "shap_value": 0.04318139636879913
+        },
+        {
+          "feature": "previous_product",
+          "feature_value": "1515966223509089687",
+          "shap_value": 0.023156266379741282
+        },
+        {
+          "feature": "previous_average_order_spend",
+          "feature_value": 41.64,
+          "shap_value": 0.018265133185578934
+        },
+        {
+          "feature": "previous_average_item_price",
+          "feature_value": 41.64,
+          "shap_value": 0.015486333900030687
+        },
+        {
+          "feature": "previous_min_order_spend",
+          "feature_value": 41.64,
+          "shap_value": 0.015290423733168695
+        },
+        {
+          "feature": "previous_category_proportion__smartphone",
+          "feature_value": 0.0,
+          "shap_value": 0.014558543794713472
+        }
+      ],
+      "top_negative_contributors": [
+        {
+          "feature": "previous_orders_last_90_days",
+          "feature_value": 1,
+          "shap_value": -0.000377212300924441
+        },
+        {
+          "feature": "average_days_between_orders",
+          "feature_value": 0.0,
+          "shap_value": -0.00015884722101574766
+        }
+      ]
+    }
+  }
+}

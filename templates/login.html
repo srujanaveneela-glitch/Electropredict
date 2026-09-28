@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Log in | ElectroPredict{% endblock %}
+
+{% block body_class %}auth-page{% endblock %}
+
+{% block content %}
+<section class="auth-shell">
+    <section class="card auth-card">
+        <p class="eyebrow">Account access</p>
+        <h1>Welcome back</h1>
+
+        <form class="auth-form" id="login-form">
+            <label>
+                <span class="field-label">Email</span>
+                <input class="form-control" name="email" required type="email">
+            </label>
+
+            <label>
+                <span class="field-label">Password</span>
+                <input class="form-control" name="password" required type="password">
+            </label>
+
+            <a class="auth-link" href="#">Forgot password?</a>
+            <button class="button button-primary" type="submit">Log in</button>
+        </form>
+
+        <p class="auth-note">
+            New to ElectroPredict?
+            <a class="auth-link" href="/register">Create an account</a>
+        </p>
+    </section>
+</section>
+{% endblock %}
+
+{% block page_scripts %}
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+{% endblock %}

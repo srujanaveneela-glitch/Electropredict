@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}Checkout | ElectroPredict{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">Secure demo checkout</p>
+        <h1>Complete your order</h1>
+        <p>Review delivery information before placing your demo order.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container checkout-layout" id="checkout-area">
+        <form class="card checkout-form" id="checkout-form">
+            <h2>Delivery information</h2>
+
+            <div class="form-row">
+                <label>
+                    <span class="field-label">Full name</span>
+                    <input required class="form-control" type="text">
+                </label>
+
+                <label>
+                    <span class="field-label">Email</span>
+                    <input required type="email" class="form-control">
+                </label>
+            </div>
+
+            <label>
+                <span class="field-label">Address</span>
+                <textarea required class="form-control" rows="3"></textarea>
+            </label>
+
+            <div class="form-row">
+                <label>
+                    <span class="field-label">City</span>
+                    <input required class="form-control" type="text">
+                </label>
+
+                <label>
+                    <span class="field-label">PIN code</span>
+                    <input required class="form-control" type="text">
+                </label>
+            </div>
+
+            <button class="button button-primary" type="submit">Place demo order</button>
+        </form>
+
+        <aside class="card">
+            <h2>Order summary</h2>
+
+            <div class="order-line">
+                <span>Samsung Galaxy S24</span>
+                <b>₹67,999</b>
+            </div>
+
+            <div class="order-line">
+                <span>Delivery</span>
+                <b>Free</b>
+            </div>
+
+            <div class="order-line">
+                <strong>Total</strong>
+                <strong>₹67,999</strong>
+            </div>
+        </aside>
+    </div>
+</section>
+{% endblock %}
+
+{% block page_scripts %}
+<script src="{{ url_for('static', filename='js/checkout.js') }}"></script>
+{% endblock %}

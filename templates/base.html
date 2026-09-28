@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% block meta_description %}ElectroPredict is a clear, research-focused electronics discovery experience.{% endblock %}">
+    <title>{% block title %}ElectroPredict{% endblock %}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block page_styles %}{% endblock %}
+</head>
+<body class="{% block body_class %}site-page{% endblock %}">
+    <header class="site-header">
+        <div class="container navbar">
+            <a class="brand" href="/" aria-label="ElectroPredict home">
+                <span class="brand-mark">E</span>
+                <span>Electro<span>Predict</span></span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
+                <a class="nav-link{% if request.path == '/' %} active{% endif %}" href="/">Home</a>
+                <a class="nav-link{% if request.path == '/products' %} active{% endif %}" href="/products">Products</a>
+                <a class="nav-link" href="/#categories">Categories</a>
+                <a class="nav-link{% if request.path == '/wishlist' %} active{% endif %}" href="/wishlist">Wishlist</a>
+                <a class="nav-link{% if request.path == '/cart' %} active{% endif %}" href="/cart">Cart</a>
+            </nav>
+
+            <div class="nav-actions">
+                <form class="search-form" id="site-search-form" action="/search" role="search">
+                    <label class="sr-only" for="site-search">Search products</label>
+                    <input id="site-search" name="q" type="search" placeholder="Search electronics" autocomplete="off">
+                    <button type="submit" aria-label="Search">⌕</button>
+                </form>
+
+                <a class="icon-button" href="/wishlist" aria-label="View wishlist">
+                    ♡
+                </a>
+
+                <a class="icon-button" href="/cart" aria-label="View cart">
+                    🛒
+                </a>
+
+                <a class="account-button" id="account-link" href="/login">Log in</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a class="brand" href="/">
+                    <span class="brand-mark">E</span>
+                    <span>Electro<span>Predict</span></span>
+                </a>
+                <p>Consumer electronics, presented with clarity.</p>
+            </div>
+
+            <div class="footer-links">
+                <strong>Explore</strong>
+                <a href="/products">Products</a>
+                <a href="/#categories">Categories</a>
+                <a href="/about">About the project</a>
+            </div>
+
+            <div class="footer-links">
+                <strong>Account</strong>
+                <a href="/profile">Profile</a>
+                <a href="/wishlist">Wishlist</a>
+                <a href="/cart">Cart</a>
+            </div>
+
+            <p class="copyright">© 2026 ElectroPredict<br>Research project interface</p>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block page_scripts %}{% endblock %}
+</body>
+</html>

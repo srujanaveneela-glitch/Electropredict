@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Product details | ElectroPredict{% endblock %}
+
+{% block page_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/product_details.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container product-layout" id="product-hero">
+        <div class="product-photo-wrap">
+            <img class="product-photo" id="product-photo" src="{{ url_for('static', filename='img/placeholder-electronics.svg') }}" alt="Product">
+        </div>
+
+        <div>
+            <p class="eyebrow" id="product-brand-category">Loading product</p>
+            <h1 id="product-name">Product details</h1>
+            <p class="product-meta" id="product-meta"></p>
+            <p class="price" id="product-price"></p>
+            <p id="product-description">Loading description...</p>
+
+            <div class="quantity-row">
+                <strong>Quantity</strong>
+                <button id="decrease" type="button">−</button>
+                <span class="quantity-value" id="quantity">1</span>
+                <button id="increase" type="button">+</button>
+            </div>
+
+            <p class="product-action-row">
+                <button class="button button-primary" id="add-cart" type="button">Add to cart</button>
+                <button class="button button-secondary" id="save-product" type="button">♡ Wishlist</button>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-soft" id="why-recommended">
+    <div class="container">
+        <h2>Why we are showing you this product</h2>
+        <div class="card explain-card" id="recommendation-reason">
+            <p>This product belongs to the category predicted by the model from purchasing patterns learned from historical consumer data.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="explainable-ai">
+    <div class="container">
+        <h2>Explainable AI: Why did the model make this prediction?</h2>
+        <div class="explain-cards">
+            <div class="card explain-card shap-card">
+                <h3>SHAP Explanation</h3>
+                <p class="xai-summary">
+                    Predicted category: <strong id="xai-category">Loading...</strong><br>
+                    Model probability: <strong id="xai-probability">—</strong>
+                </p>
+                <ul class="friendly-shap" id="xai-shap"></ul>
+                <p class="shap-note">SHAP shows how individual features contributed to the model's prediction. Positive values support the predicted category, while negative values push the prediction away from it.</p>
+            </div>
+            <div class="card explain-card gemini-card">
+                <h3>Gemini Explanation</h3>
+                <div class="gemini-box" id="xai-gemini">Loading explanation...</div>
+            </div>
+        </div>
+        <details class="technical-details">
+            <summary>Technical details</summary>
+            <pre id="xai-technical"></pre>
+        </details>
+    </div>
+</section>
+
+<section class="section section-soft" id="related-products">
+    <div class="container">
+        <h2>Other products you may like</h2>
+        <div class="product-grid" id="related-grid">
+            <div class="card" style="padding:18px;grid-column:1/-1;">Loading related products...</div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block page_scripts %}
+<script src="{{ url_for('static', filename='js/product_details.js') }}"></script>
+{% endblock %}

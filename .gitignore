@@ -1,0 +1,31 @@
+# Database
+electropredict.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment / secrets
+.env
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large dataset
+electropredict.csv
+
+# Large ML model
+ml/artifacts/phase3_random_forest_pipeline.joblib

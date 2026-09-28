@@ -1,0 +1,40 @@
+.profile-grid {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 28px
+}
+
+.profile-nav a {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .88rem
+}
+
+.profile-nav a.active {
+    color: var(--blue);
+    font-weight: bold
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px
+}
+
+.summary-number {
+    font-size: 1.65rem;
+    font-weight: bold;
+    color: var(--blue)
+}
+
+@media(max-width:700px) {
+    .profile-grid {
+        grid-template-columns: 1fr
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr
+    }
+}

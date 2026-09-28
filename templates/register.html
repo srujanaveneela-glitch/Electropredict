@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Create account | ElectroPredict{% endblock %}
+
+{% block body_class %}auth-page{% endblock %}
+
+{% block content %}
+<section class="auth-shell">
+    <section class="card auth-card">
+        <p class="eyebrow">Create account</p>
+        <h1>Join ElectroPredict</h1>
+
+        <form class="auth-form" id="register-form">
+            <label>
+                <span class="field-label">Full name</span>
+                <input class="form-control" name="name" required type="text">
+            </label>
+
+            <label>
+                <span class="field-label">Email</span>
+                <input class="form-control" name="email" required type="email">
+            </label>
+
+            <label>
+                <span class="field-label">Password</span>
+                <input id="password" class="form-control" name="password" required type="password" minlength="6">
+            </label>
+
+            <label>
+                <span class="field-label">Confirm password</span>
+                <input id="confirm-password" class="form-control" required type="password">
+            </label>
+
+            <button class="button button-primary" type="submit">Create account</button>
+        </form>
+
+        <p class="auth-note">
+            Already registered?
+            <a class="auth-link" href="/login">Log in</a>
+        </p>
+    </section>
+</section>
+{% endblock %}
+
+{% block page_scripts %}
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+{% endblock %}

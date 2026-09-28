@@ -1,0 +1,47 @@
+.prediction-card {
+    text-align: center;
+    padding: 38px
+}
+
+.probability {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: var(--blue);
+    letter-spacing: -4px
+}
+
+.prediction-label {
+    display: inline-block;
+    padding: 8px 13px;
+    border-radius: 99px;
+    background: #e4f8ed;
+    color: var(--success);
+    font-weight: bold
+}
+
+.factor-list {
+    display: grid;
+    gap: 10px
+}
+
+.factor {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px;
+    border-radius: 8px;
+    background: var(--soft);
+    font-size: .86rem
+}
+
+.bar {
+    height: 8px;
+    border-radius: 99px;
+    background: #d9e6ff
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    border-radius: 99px;
+    background: var(--blue)
+}

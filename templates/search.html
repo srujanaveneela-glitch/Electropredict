@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Search | ElectroPredict{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">Product search</p>
+        <h1>Search the catalogue</h1>
+        <form class="catalogue-search" id="search-form">
+            <label class="sr-only" for="search-input">Search products</label>
+            <input id="search-input" placeholder="Try headphones, Samsung, or camera">
+            <button class="button button-primary" type="submit">Search</button>
+        </form>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container results-layout">
+        <aside class="card">
+            <h2>Quick filters</h2>
+            <label class="field-label" for="category">Category</label>
+            <select class="form-control" id="category">
+                <option value="all">All categories</option>
+                <option>Smartphones</option>
+                <option>Headphones</option>
+                <option>Cameras</option>
+            </select>
+
+            <label class="field-label" for="rating">Minimum rating</label>
+            <select class="form-control" id="rating">
+                <option value="0">Any rating</option>
+                <option value="4.5">4.5 and above</option>
+                <option value="4">4.0 and above</option>
+            </select>
+        </aside>
+
+        <div>
+            <p id="result-count" class="small-muted"></p>
+            <div class="result-list product-grid" id="result-list"></div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block page_scripts %}
+<script src="{{ url_for('static', filename='js/search.js') }}"></script>
+{% endblock %}

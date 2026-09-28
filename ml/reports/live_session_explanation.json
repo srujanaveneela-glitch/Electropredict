@@ -1,0 +1,123 @@
+{
+  "status": "success",
+  "model": "RandomForestClassifier",
+  "predicted_category": "Other electronics",
+  "predicted_category_canonical": "other_electronics",
+  "shap_explained_category": "other_electronics",
+  "gemini_explained_category": "other_electronics",
+  "recommendation_category": "other_electronics",
+  "prediction_probability": 0.7462565538721944,
+  "shap_contributors": [
+    {
+      "feature": "Your previous purchases show interest in similar products.",
+      "direction": "positive",
+      "weight": 0.14584873073557075
+    },
+    {
+      "feature": "This category has appeared frequently in your purchasing history.",
+      "direction": "positive",
+      "weight": 0.10815509964822467
+    },
+    {
+      "feature": "Your previous product and brand preferences also influenced the prediction.",
+      "direction": "positive",
+      "weight": 0.04318139636879913
+    },
+    {
+      "feature": "Your previous spending pattern contributed to this prediction.",
+      "direction": "positive",
+      "weight": 0.018265133185578934
+    }
+  ],
+  "gemini_explanation": "Model Prediction:\nThe model predicts the category \"Other electronics\" with a probability of 0.7462565538721944.\n\nExplanation of Prediction:\nThe following positive factors pushed the model toward predicting \"Other electronics\":\n- Your previous purchases show interest in similar products (contribution: +0.14584873073557075)\n- This category has appeared frequently in your purchasing history (contribution: +0.10815509964822467)\n- Your previous product and brand preferences also influenced the prediction (contribution: +0.04318139636879913)\n- Your previous spending pattern contributed to this prediction (contribution: +0.018265133185578934)\n\nFactors pushing away from the predicted category:\n- There were no top factors pushing the model away from this category.\n\nPlease note: This is a model association, not a guaranteed purchase.",
+  "gemini_status": "success",
+  "gemini_model": "gemini-3.6-flash",
+  "technical_details": {
+    "predicted_category": "other_electronics",
+    "prediction_probability": 0.7462565538721944,
+    "class_probabilities": {
+      "audio": 0.02959846508083352,
+      "camera": 0.0022333076419015314,
+      "computer_components": 0.022522838729048138,
+      "computer_peripherals": 0.048074016430216124,
+      "desktop": 0.018969108830614444,
+      "laptop_notebook": 0.03082963701882957,
+      "other_electronics": 0.7462565538721944,
+      "smartphone": 0.017445856165646947,
+      "smartwatch_clocks": 0.009800987829163195,
+      "tablet": 0.02210206206149234,
+      "telephone": 0.025116806932389556,
+      "video": 0.02705035940767062
+    },
+    "shap_contributors": [
+      {
+        "feature": "previous_category",
+        "feature_value": "other_electronics",
+        "shap_value": 0.14584873073557075,
+        "direction": "positive"
+      },
+      {
+        "feature": "most_frequent_previous_category",
+        "feature_value": "other_electronics",
+        "shap_value": 0.10815509964822467,
+        "direction": "positive"
+      },
+      {
+        "feature": "previous_category_proportion__other_electronics",
+        "feature_value": 1.0,
+        "shap_value": 0.10413594601711651,
+        "direction": "positive"
+      },
+      {
+        "feature": "previous_category_count__other_electronics",
+        "feature_value": 1,
+        "shap_value": 0.06527766924963331,
+        "direction": "positive"
+      },
+      {
+        "feature": "previous_brand",
+        "feature_value": "altel",
+        "shap_value": 0.04318139636879913,
+        "direction": "positive"
+      },
+      {
+        "feature": "previous_product",
+        "feature_value": "1515966223509089687",
+        "shap_value": 0.023156266379741282,
+        "direction": "positive"
+      },
+      {
+        "feature": "previous_average_order_spend",
+        "feature_value": 41.64,
+        "shap_value": 0.018265133185578934,
+        "direction": "positive"
+      },
+      {
+        "feature": "previous_average_item_price",
+        "feature_value": 41.64,
+        "shap_value": 0.015486333900030687,
+        "direction": "positive"
+      },
+      {
+        "feature": "previous_min_order_spend",
+        "feature_value": 41.64,
+        "shap_value": 0.015290423733168695,
+        "direction": "positive"
+      },
+      {
+        "feature": "previous_category_proportion__smartphone",
+        "feature_value": 0.0,
+        "shap_value": 0.014558543794713472,
+        "direction": "positive"
+      }
+    ],
+    "shap_probability_validation": {
+      "expected_value": 0.09199604624611091,
+      "shap_sum_for_predicted_class": 0.6542710761584883,
+      "reconstructed_probability": 0.7462671224045992,
+      "model_probability": 0.7462565538721944,
+      "absolute_difference": 1.0568532404886533e-05
+    },
+    "source_row_index": 0
+  }
+}

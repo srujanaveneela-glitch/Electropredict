@@ -1,0 +1,13 @@
+actual,audio,camera,computer_components,computer_peripherals,desktop,laptop_notebook,other_electronics,smartphone,smartwatch_clocks,tablet,telephone,video
+audio,375,6,60,116,4,69,42,210,44,33,12,58
+camera,3,31,0,1,0,8,1,2,1,0,1,0
+computer_components,51,9,622,131,14,53,32,83,17,31,18,62
+computer_peripherals,111,6,131,518,18,147,48,112,28,29,22,64
+desktop,2,0,2,5,28,4,3,7,2,5,0,4
+laptop_notebook,75,4,55,107,15,1113,39,172,30,31,11,60
+other_electronics,31,1,25,47,7,21,225,55,16,10,8,27
+smartphone,267,10,108,159,24,236,97,4563,189,98,97,229
+smartwatch_clocks,40,1,9,13,0,31,13,75,361,5,12,25
+tablet,22,2,12,13,1,15,7,30,15,148,8,24
+telephone,10,0,1,5,0,5,3,23,2,7,34,13
+video,41,4,31,45,6,55,29,139,39,23,14,770

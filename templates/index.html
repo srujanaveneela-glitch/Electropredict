@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}ElectroPredict | Consumer Electronics{% endblock %}
+
+{% block meta_description %}
+Discover consumer electronics with clear product information and explainable purchase insights.
+{% endblock %}
+
+{% block body_class %}home-page{% endblock %}
+
+{% block content %}
+<section class="hero-section" id="home">
+    <div class="container hero-content">
+        <div class="hero-copy">
+            <p class="eyebrow">Thoughtful technology, clearly chosen</p>
+            <h1>Find electronics that fit how you live.</h1>
+            <p class="hero-description">
+                Explore phones, laptops, audio, cameras, and more, with clear pricing and product details that make a decision easier.
+            </p>
+            <div class="hero-buttons">
+                <a class="button button-primary" href="/products">Explore products <span aria-hidden="true">→</span></a>
+                <a class="button button-secondary" href="/#categories">Browse categories</a>
+            </div>
+            <p class="hero-note">A research-focused storefront for explainable electronics recommendations.</p>
+        </div>
+
+        <div class="hero-visual" aria-label="A collection of consumer electronics">
+            <div class="hero-laptop">▱</div>
+            <div class="hero-phone">▯</div>
+            <div class="hero-earbuds">◖ ◗</div>
+            <div class="hero-label label-top">Precision<br>meets possibility</div>
+            <div class="hero-label label-bottom">Curated electronics<br>for everyday decisions</div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="categories">
+    <div class="container">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">Browse with ease</p>
+                <h2>Shop by category</h2>
+            </div>
+            <a class="text-link" href="/products">View all products →</a>
+        </div>
+        <div class="category-grid" id="home-category-grid">
+            <div class="card" style="padding:18px;grid-column:1/-1;">Loading categories...</div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-soft" id="featured-products">
+    <div class="container">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">Chosen for today</p>
+                <h2>Featured electronics</h2>
+            </div>
+            <a class="text-link" href="/products">See collection →</a>
+        </div>
+        <div class="product-grid" id="home-featured-grid">
+            <div class="card" style="padding:18px;grid-column:1/-1;">Loading featured products...</div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="home-recommendations">
+    <div class="container">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">Suggested for you</p>
+                <h2>Recommended products</h2>
+                <p class="section-subtitle">Selected from the category predicted from purchasing history.</p>
+            </div>
+            <a class="text-link" href="/products">Browse the catalogue →</a>
+        </div>
+        <div class="product-grid" id="home-recommendation-grid">
+            <div class="card" style="padding:18px;grid-column:1/-1;">Loading recommended products...</div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block page_scripts %}
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}

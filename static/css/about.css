@@ -1,0 +1,51 @@
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px
+}
+
+.workflow {
+    display: grid;
+    gap: 0
+}
+
+.workflow div {
+    position: relative;
+    padding: 16px 16px 16px 53px;
+    border-left: 2px solid #cfe0ff
+}
+
+.workflow span {
+    position: absolute;
+    left: -14px;
+    top: 15px;
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: #fff;
+    font-size: .7rem;
+    font-weight: bold
+}
+
+.stack-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px
+}
+
+.stack-list span {
+    padding: 8px 10px;
+    border-radius: 7px;
+    background: var(--soft);
+    font-size: .82rem;
+    font-weight: bold
+}
+
+@media(max-width:700px) {
+    .about-grid {
+        grid-template-columns: 1fr
+    }
+}

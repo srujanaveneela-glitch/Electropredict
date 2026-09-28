@@ -1,0 +1,233 @@
+{
+  "phase": 3,
+  "data_path": "D:\\SRUJANA\\Term Paper\\ElectroPredict\\ml\\data\\phase2_training.csv.gz",
+  "pipeline_path": "D:\\SRUJANA\\Term Paper\\ElectroPredict\\ml\\artifacts\\phase3_random_forest_pipeline.joblib",
+  "model": "RandomForestClassifier",
+  "random_state": 42,
+  "target_column": "next_purchase_category",
+  "feature_column_count": 42,
+  "feature_columns": [
+    "history_order_count",
+    "history_purchase_count",
+    "previous_total_spend",
+    "previous_average_order_spend",
+    "previous_min_order_spend",
+    "previous_max_order_spend",
+    "previous_average_item_price",
+    "previous_unique_product_count",
+    "previous_unique_brand_count",
+    "days_since_previous_order",
+    "average_days_between_orders",
+    "previous_category_diversity",
+    "previous_category",
+    "most_frequent_previous_category",
+    "previous_brand",
+    "previous_product",
+    "previous_orders_last_30_days",
+    "previous_orders_last_90_days",
+    "previous_category_count__audio",
+    "previous_category_proportion__audio",
+    "previous_category_count__camera",
+    "previous_category_proportion__camera",
+    "previous_category_count__computer_components",
+    "previous_category_proportion__computer_components",
+    "previous_category_count__computer_peripherals",
+    "previous_category_proportion__computer_peripherals",
+    "previous_category_count__desktop",
+    "previous_category_proportion__desktop",
+    "previous_category_count__laptop_notebook",
+    "previous_category_proportion__laptop_notebook",
+    "previous_category_count__other_electronics",
+    "previous_category_proportion__other_electronics",
+    "previous_category_count__smartphone",
+    "previous_category_proportion__smartphone",
+    "previous_category_count__smartwatch_clocks",
+    "previous_category_proportion__smartwatch_clocks",
+    "previous_category_count__tablet",
+    "previous_category_proportion__tablet",
+    "previous_category_count__telephone",
+    "previous_category_proportion__telephone",
+    "previous_category_count__video",
+    "previous_category_proportion__video"
+  ],
+  "numeric_columns": [
+    "history_order_count",
+    "history_purchase_count",
+    "previous_total_spend",
+    "previous_average_order_spend",
+    "previous_min_order_spend",
+    "previous_max_order_spend",
+    "previous_average_item_price",
+    "previous_unique_product_count",
+    "previous_unique_brand_count",
+    "days_since_previous_order",
+    "average_days_between_orders",
+    "previous_category_diversity",
+    "previous_orders_last_30_days",
+    "previous_orders_last_90_days",
+    "previous_category_count__audio",
+    "previous_category_proportion__audio",
+    "previous_category_count__camera",
+    "previous_category_proportion__camera",
+    "previous_category_count__computer_components",
+    "previous_category_proportion__computer_components",
+    "previous_category_count__computer_peripherals",
+    "previous_category_proportion__computer_peripherals",
+    "previous_category_count__desktop",
+    "previous_category_proportion__desktop",
+    "previous_category_count__laptop_notebook",
+    "previous_category_proportion__laptop_notebook",
+    "previous_category_count__other_electronics",
+    "previous_category_proportion__other_electronics",
+    "previous_category_count__smartphone",
+    "previous_category_proportion__smartphone",
+    "previous_category_count__smartwatch_clocks",
+    "previous_category_proportion__smartwatch_clocks",
+    "previous_category_count__tablet",
+    "previous_category_proportion__tablet",
+    "previous_category_count__telephone",
+    "previous_category_proportion__telephone",
+    "previous_category_count__video",
+    "previous_category_proportion__video"
+  ],
+  "categorical_columns": [
+    "previous_category",
+    "most_frequent_previous_category",
+    "previous_brand",
+    "previous_product"
+  ],
+  "explicit_categorical_history_columns": [
+    "most_frequent_previous_category",
+    "previous_brand",
+    "previous_category",
+    "previous_product"
+  ],
+  "forbidden_columns": [
+    "history_end_order_id",
+    "history_end_timestamp",
+    "next_purchase_category",
+    "prediction_timestamp",
+    "target_order_id",
+    "user_id"
+  ],
+  "train_samples": 55756,
+  "test_samples": 13939,
+  "train_start_timestamp": "2020-01-05T06:27:32+00:00",
+  "train_end_timestamp": "2020-10-05T11:52:01+00:00",
+  "test_start_timestamp": "2020-10-05T11:53:32+00:00",
+  "test_end_timestamp": "2020-11-21T10:10:01+00:00",
+  "split_boundary_test_start": "2020-10-05T11:53:32+00:00",
+  "preprocessing_fit_on_training_only": true,
+  "temporal_split_without_shuffle": true,
+  "forbidden_columns_excluded": true,
+  "saved_pipeline_reload_check": true,
+  "evaluation": {
+    "accuracy": 0.6304612956453117,
+    "macro_f1": 0.4858527575287869,
+    "weighted_f1": 0.6380582985323595,
+    "majority_class": "smartphone",
+    "majority_baseline_accuracy": 0.4359710165722075,
+    "test_samples": 13939,
+    "classification_report": {
+      "audio": {
+        "precision": 0.3647859922178988,
+        "recall": 0.36443148688046645,
+        "f1-score": 0.36460865337870685,
+        "support": 1029.0
+      },
+      "camera": {
+        "precision": 0.4189189189189189,
+        "recall": 0.6458333333333334,
+        "f1-score": 0.5081967213114754,
+        "support": 48.0
+      },
+      "computer_components": {
+        "precision": 0.5890151515151515,
+        "recall": 0.553873552983081,
+        "f1-score": 0.5709040844424048,
+        "support": 1123.0
+      },
+      "computer_peripherals": {
+        "precision": 0.44655172413793104,
+        "recall": 0.419773095623987,
+        "f1-score": 0.4327485380116959,
+        "support": 1234.0
+      },
+      "desktop": {
+        "precision": 0.23931623931623933,
+        "recall": 0.45161290322580644,
+        "f1-score": 0.3128491620111732,
+        "support": 62.0
+      },
+      "laptop_notebook": {
+        "precision": 0.6334661354581673,
+        "recall": 0.6501168224299065,
+        "f1-score": 0.641683482271548,
+        "support": 1712.0
+      },
+      "other_electronics": {
+        "precision": 0.4174397031539889,
+        "recall": 0.47568710359408034,
+        "f1-score": 0.44466403162055335,
+        "support": 473.0
+      },
+      "smartphone": {
+        "precision": 0.8340339974410528,
+        "recall": 0.7508639131150239,
+        "f1-score": 0.79026671285071,
+        "support": 6077.0
+      },
+      "smartwatch_clocks": {
+        "precision": 0.4852150537634409,
+        "recall": 0.6170940170940171,
+        "f1-score": 0.5432656132430399,
+        "support": 585.0
+      },
+      "tablet": {
+        "precision": 0.3523809523809524,
+        "recall": 0.4983164983164983,
+        "f1-score": 0.41283124128312415,
+        "support": 297.0
+      },
+      "telephone": {
+        "precision": 0.14345991561181434,
+        "recall": 0.3300970873786408,
+        "f1-score": 0.2,
+        "support": 103.0
+      },
+      "video": {
+        "precision": 0.5763473053892215,
+        "recall": 0.6438127090301003,
+        "f1-score": 0.608214849921011,
+        "support": 1196.0
+      },
+      "accuracy": 0.6304612956453117,
+      "macro avg": {
+        "precision": 0.45841092410873147,
+        "recall": 0.5334593769170785,
+        "f1-score": 0.4858527575287869,
+        "support": 13939.0
+      },
+      "weighted avg": {
+        "precision": 0.6503897444209364,
+        "recall": 0.6304612956453117,
+        "f1-score": 0.6380582985323595,
+        "support": 13939.0
+      }
+    },
+    "class_labels": [
+      "audio",
+      "camera",
+      "computer_components",
+      "computer_peripherals",
+      "desktop",
+      "laptop_notebook",
+      "other_electronics",
+      "smartphone",
+      "smartwatch_clocks",
+      "tablet",
+      "telephone",
+      "video"
+    ]
+  }
+}

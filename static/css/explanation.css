@@ -1,0 +1,83 @@
+.explanation-layout {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 28px
+}
+
+.reason-list {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.reason-list li {
+    position: relative;
+    margin: 0 0 12px;
+    padding: 12px 16px 12px 42px;
+    border: 1px solid var(--line, #e7eaf0);
+    border-radius: 10px;
+    background: #f8faff;
+    color: #172238;
+    font-size: .9rem;
+    line-height: 1.5
+}
+
+.reason-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 14px;
+    top: 11px;
+    display: grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e8f0ff;
+    color: #2563eb;
+    font-size: .72rem;
+    font-weight: bold
+}
+
+.gemini-paragraph {
+    margin: 0;
+    color: #172238;
+    font-size: .92rem;
+    line-height: 1.6
+}
+
+.demo-label {
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 99px;
+    background: #fff1d5;
+    color: #895e00;
+    font-size: .7rem;
+    font-weight: bold
+}
+
+.contribution {
+    display: grid;
+    grid-template-columns: 140px 1fr 55px;
+    gap: 12px;
+    align-items: center;
+    margin: 16px 0;
+    font-size: .84rem
+}
+
+.contribution .positive {
+    background: var(--blue)
+}
+
+.contribution .negative {
+    background: #d5566d
+}
+
+@media(max-width:700px) {
+    .explanation-layout {
+        grid-template-columns: 1fr
+    }
+
+    .contribution {
+        grid-template-columns: 105px 1fr 45px
+    }
+}

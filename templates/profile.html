@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Profile | ElectroPredict{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">Account dashboard</p>
+        <h1>My profile</h1>
+        <p>Manage your account, saved products, and research activity.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container profile-grid">
+        <aside class="card profile-nav">
+            <b>Account</b>
+            <a class="active" href="/profile">Profile overview</a>
+            <a href="/orders">Orders</a>
+            <a href="/wishlist">Wishlist</a>
+            <a href="/activity">Activity</a>
+            <button class="button button-danger" id="logout" type="button">Log out</button>
+        </aside>
+
+        <div>
+            <div class="summary-grid">
+                <div class="card">
+                    <span class="summary-number">2</span>
+                    <p>Orders</p>
+                </div>
+                <div class="card">
+                    <span class="summary-number">3</span>
+                    <p>Saved items</p>
+                </div>
+                <div class="card">
+                    <span class="summary-number">12</span>
+                    <p>Interactions</p>
+                </div>
+            </div>
+
+            <section class="card" style="margin-top: 18px;">
+                <h2>Account information</h2>
+                <p><b>Name:</b> Demo Shopper</p>
+                <p><b>Email:</b> demo@electropredict.local</p>
+                <p>Your account activity supports the research workflow when you choose to use these features.</p>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block page_scripts %}
+<script src="{{ url_for('static', filename='js/profile.js') }}"></script>
+{% endblock %}

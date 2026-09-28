@@ -1,0 +1,30 @@
+.saved-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px
+}
+
+.saved-item img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 9px
+}
+
+.saved-item h2 {
+    font-size: 1rem
+}
+
+.empty-box {
+    text-align: center;
+    padding: 68px 20px;
+    border: 1px dashed #cbd5e4;
+    border-radius: var(--radius);
+    color: var(--muted)
+}
+
+@media(max-width:750px) {
+    .saved-grid {
+        grid-template-columns: 1fr
+    }
+}

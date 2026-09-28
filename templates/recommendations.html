@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% block title %}Recommendations | ElectroPredict{% endblock %}
+{% block meta_description %}Explainable AI-driven electronics recommendations based on consumer purchasing patterns.{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <p class="breadcrumb"><a href="/">Home</a> <span>/</span> Recommendations</p>
+        <p class="eyebrow">Explainable AI • Recommendation System</p>
+        <h1>Recommended for you</h1>
+        <p>Based on your purchasing patterns</p>
+    </div>
+</section>
+
+<!-- Visual Explainable AI Pipeline Diagram -->
+<section class="section section-pipeline">
+    <div class="container">
+        <div class="pipeline-card">
+            <p class="pipeline-title">Explainable AI Recommendation Pipeline</p>
+            <div class="pipeline-steps">
+                <div class="pipeline-step">
+                    <span class="step-num">01</span>
+                    <div class="step-content">
+                        <strong>Purchasing History</strong>
+                        <small>Consumer patterns</small>
+                    </div>
+                </div>
+                <div class="pipeline-arrow" aria-hidden="true">→</div>
+                <div class="pipeline-step">
+                    <span class="step-num">02</span>
+                    <div class="step-content">
+                        <strong>ML Prediction</strong>
+                        <small>Random Forest</small>
+                    </div>
+                </div>
+                <div class="pipeline-arrow" aria-hidden="true">→</div>
+                <div class="pipeline-step">
+                    <span class="step-num">03</span>
+                    <div class="step-content">
+                        <strong>SHAP Explains WHY</strong>
+                        <small>Feature attribution</small>
+                    </div>
+                </div>
+                <div class="pipeline-arrow" aria-hidden="true">→</div>
+                <div class="pipeline-step">
+                    <span class="step-num">04</span>
+                    <div class="step-content">
+                        <strong>Gemini Explanation</strong>
+                        <small>Natural language</small>
+                    </div>
+                </div>
+                <div class="pipeline-arrow" aria-hidden="true">→</div>
+                <div class="pipeline-step">
+                    <span class="step-num">05</span>
+                    <div class="step-content">
+                        <strong>Predicted Category</strong>
+                        <small>Target category</small>
+                    </div>
+                </div>
+                <div class="pipeline-arrow" aria-hidden="true">→</div>
+                <div class="pipeline-step">
+                    <span class="step-num">06</span>
+                    <div class="step-content">
+                        <strong>Recommendation System</strong>
+                        <small>Catalogue ranking</small>
+                    </div>
+                </div>
+                <div class="pipeline-arrow" aria-hidden="true">→</div>
+                <div class="pipeline-step">
+                    <span class="step-num">07</span>
+                    <div class="step-content">
+                        <strong>Electronics Products</strong>
+                        <small>Real items</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <!-- Category Selection Card (Only Categories with Actual Products) -->
+        <div class="card recommendation-control-card">
+            <form class="recommendation-form" id="recommendation-form">
+                <div class="form-group-inline">
+                    <label class="field-label" for="predicted-category">Predicted shopping category</label>
+                    <select class="form-control" id="predicted-category" required>
+                        <option value="">Loading available categories...</option>
+                    </select>
+                </div>
+                <button class="button button-primary" type="submit">Show recommendations</button>
+            </form>
+        </div>
+
+        <!-- AI-POWERED RECOMMENDATION & EXPLAINABLE AI SECTION -->
+        <div class="xai-recommendation-panel" id="xai-panel">
+            <div class="xai-panel-header">
+                <span class="badge-ai">AI-POWERED RECOMMENDATION</span>
+                <h2>Predicted category: <span class="highlight-category" id="predicted-category-display">Laptops</span></h2>
+                <p class="xai-panel-sub">
+                    The machine learning model (Random Forest Classifier) evaluates purchasing frequency, category history, and spending patterns to predict your next electronics category with <strong id="prediction-probability-display">74.6%</strong> confidence.
+                </p>
+            </div>
+
+            <div class="xai-grid">
+                <!-- SHAP Feature Attribution -->
+                <div class="card xai-card">
+                    <div class="xai-card-header">
+                        <p class="eyebrow">Phase 4 • Feature Attribution</p>
+                        <h3>Why did the AI predict this?</h3>
+                        <p class="xai-desc">Key factors influencing the prediction derived from TreeSHAP values. Positive factors push toward this category; negative factors push away.</p>
+                    </div>
+
+                    <div class="shap-factors-list" id="shap-factors-list">
+                        <div class="loading-placeholder">Loading SHAP feature attributions...</div>
+                    </div>
+                </div>
+
+                <!-- Gemini Natural Language Explanation -->
+                <div class="card xai-card">
+                    <div class="xai-card-header">
+                        <p class="eyebrow">Phase 5 • Natural Language Synthesis</p>
+                        <h3>AI Explanation</h3>
+                        <p class="xai-desc">Google Gemini interprets the quantitative SHAP evidence into a clear, natural-language explanation without altering the prediction.</p>
+                    </div>
+
+                    <div class="gemini-explanation-box" id="gemini-explanation-box">
+                        <div class="loading-placeholder">Loading AI explanation...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RECOMMENDED PRODUCTS SECTION -->
+        <div class="recommended-products-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Catalogue Matches</p>
+                    <h2>Recommended for you</h2>
+                </div>
+                <p class="recommendation-status" id="recommendation-status" aria-live="polite">Showing matching catalogue products.</p>
+            </div>
+
+            <div class="product-grid" id="recommendation-grid">
+                <!-- Product cards inserted by recommendations.js -->
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block page_scripts %}
+    <script src="{{ url_for('static', filename='js/recommendations.js') }}"></script>
+{% endblock %}

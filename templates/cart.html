@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Cart | ElectroPredict{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">Your selection</p>
+        <h1>Your cart</h1>
+        <p>Review your selected electronics before moving to checkout.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container cart-layout">
+        <div class="card" id="cart-items">
+            <p>Loading cart...</p>
+        </div>
+
+        <aside class="card">
+            <h2>Order summary</h2>
+            <div class="summary-row"><span>Subtotal</span><b id="subtotal">₹0</b></div>
+            <div class="summary-row"><span>Delivery</span><b>Free</b></div>
+            <div class="summary-row total"><span>Total</span><b id="total">₹0</b></div>
+            <a class="button button-primary" style="width:100%" href="/checkout">Proceed to checkout</a>
+        </aside>
+    </div>
+</section>
+{% endblock %}
+
+{% block page_scripts %}
+<script src="{{ url_for('static', filename='js/cart.js') }}"></script>
+{% endblock %}

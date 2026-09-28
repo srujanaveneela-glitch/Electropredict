@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Prediction | ElectroPredict{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">Purchase prediction</p>
+        <h1>Prediction overview</h1>
+        <p>Review the predicted category and the factors prepared for explanation.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="card prediction-card">
+            <span class="badge-ai">PHASE 3 RANDOM FOREST</span>
+            <h2 id="pred-category-title" style="margin-top:12px;">Predicted Category: <span class="highlight-category" id="pred-category-name">other_electronics</span></h2>
+            <div class="probability" id="pred-probability">74.6%</div>
+            <span class="prediction-label">Prediction Probability</span>
+            <p style="margin-top:10px;">This real output is produced by the fitted Random Forest classifier evaluated on consumer purchasing patterns.</p>
+            <div style="margin-top:16px;">
+                <a class="button button-primary" href="/explanation">View detailed explanation</a>
+                <a class="button button-secondary" href="/recommendations" style="margin-left:8px;">View recommendations</a>
+            </div>
+        </div>
+
+        <section class="card" style="margin-top: 22px;">
+            <h2>Top feature contributions (TreeSHAP)</h2>
+            <p>Real feature importances pushing the model toward or away from this predicted category.</p>
+            <div id="prediction-factors-list" class="shap-factors-list" style="margin-top:16px;">
+                <div class="loading-placeholder">Loading real SHAP factors...</div>
+            </div>
+        </section>
+    </div>
+</section>
+{% endblock %}
+
+{% block page_scripts %}
+<script src="{{ url_for('static', filename='js/prediction.js') }}"></script>
+{% endblock %}

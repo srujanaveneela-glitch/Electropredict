@@ -1,0 +1,34 @@
+.order-card {
+    margin-bottom: 16px
+}
+
+.order-top,
+.order-product {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center
+}
+
+.order-top {
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line)
+}
+
+.order-product {
+    padding-top: 14px
+}
+
+.status {
+    padding: 5px 8px;
+    border-radius: 99px;
+    background: #e4f8ed;
+    color: var(--success);
+    font-size: .7rem;
+    font-weight: bold
+}
+
+.order-date {
+    color: var(--muted);
+    font-size: .8rem
+}

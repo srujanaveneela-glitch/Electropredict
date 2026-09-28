@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Activity | ElectroPredict{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">Research data layer</p>
+        <h1>User activity</h1>
+        <p>Review the interaction records associated with your account.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="research-message">
+            <b>Consent-based data:</b>
+            Activity is used to support the research workflow and is shown only for the signed-in account.
+        </div>
+
+        <div class="card" style="overflow:auto">
+            <table class="activity-table">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Event</th>
+                        <th>Price</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="6">Loading activity...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block page_scripts %}
+<script src="{{ url_for('static', filename='js/activity.js') }}"></script>
+{% endblock %}

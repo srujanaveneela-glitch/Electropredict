@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}Products | ElectroPredict{% endblock %}
+
+{% block content %}
+<section class="catalogue-hero">
+    <div class="container">
+        <p class="breadcrumb"><a href="/">Home</a> <span>/</span> Products</p>
+        <p class="eyebrow">Consumer electronics catalogue</p>
+        <h1>Technology that works for you.</h1>
+        <p>Search, compare, and filter the collection with simple product details and clear pricing.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container catalogue-layout">
+        <aside class="filters-panel" aria-label="Product filters">
+            <div class="filter-title">
+                <h2>Filters</h2>
+                <button id="clear-filters" type="button">Clear all</button>
+            </div>
+
+            <div class="filter-group" id="category-filter">
+                <h3>Category</h3>
+                <label class="field-label" for="category-select">Choose a category</label>
+                <select id="category-filter">
+    <option value="">All Categories</option>
+    <option value="smartphone">Smartphones</option>
+    <option value="laptop_notebook">Laptops</option>
+    <option value="tablet">Tablets</option>
+    <option value="smartwatch_clocks">Smartwatches</option>
+    <option value="audio">Audio</option>
+    <option value="video">Video</option>
+    <option value="computer_peripherals">Computer Peripherals</option>
+    <option value="computer_components">Computer Components</option>
+    <option value="telephone">Telephones</option>
+    <option value="desktop">Desktops</option>
+    <option value="camera">Cameras</option>
+    <option value="other_electronics">Other Electronics</option>
+</select>
+                <div id="category-checkboxes"></div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Price range</h3>
+                <div class="price-inputs">
+                    <label>Min <input id="min-price" type="number" min="0" placeholder="₹ 0"></label>
+                    <label>Max <input id="max-price" type="number" min="0" placeholder="₹ 100000"></label>
+                </div>
+            </div>
+
+            <div class="filter-group rating-filter">
+                <h3>Customer rating</h3>
+                <label><input type="radio" name="rating" value="4.5"><b>★</b> 4.5 and above</label>
+                <label><input type="radio" name="rating" value="4"><b>★</b> 4.0 and above</label>
+                <label><input type="radio" name="rating" value="0" checked> Any rating</label>
+            </div>
+
+            <div class="filter-group">
+                <label><input id="discount-only" type="checkbox"> On sale only</label>
+            </div>
+        </aside>
+
+        <div class="products-content">
+            <div class="catalogue-controls">
+                <form class="catalogue-search" id="catalogue-search" role="search">
+                    <label class="sr-only" for="product-search">Search product catalogue</label>
+                    <input id="product-search" type="search" placeholder="Search by product, brand, or category">
+                    <button type="submit" aria-label="Search products">⌕</button>
+                </form>
+
+                <div class="sort-control">
+                    <label for="sort-products">Sort by</label>
+                    <select id="sort-products">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: low to high</option>
+                        <option value="price-high">Price: high to low</option>
+                        <option value="rating">Highest rated</option>
+                        <option value="discount">Biggest discount</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="results-bar">
+                <p id="results-count" aria-live="polite">Loading products</p>
+                <button class="mobile-filter-button" id="mobile-filter-button" type="button">Filters</button>
+            </div>
+
+            <div class="product-grid" id="product-grid"></div>
+
+            <div class="empty-state" id="empty-state" hidden>
+                <span>⌕</span>
+                <h2>No products found</h2>
+                <p>Try changing your search words or removing one of the filters.</p>
+                <button class="button button-primary" id="empty-clear-button" type="button">Clear filters</button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block page_scripts %}
+<script src="{{ url_for('static', filename='js/products.js') }}?v=10"></script>
+{% endblock %}

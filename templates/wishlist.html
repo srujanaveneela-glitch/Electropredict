@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Wishlist | ElectroPredict{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">Saved items</p>
+        <h1>Your wishlist</h1>
+        <p>Keep products you may want to compare or revisit.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="product-grid" id="wishlist-grid"></div>
+
+        <div class="empty-state" id="empty-wishlist" hidden>
+            <h2>Your wishlist is empty</h2>
+            <p>Save a product to compare it later.</p>
+            <a class="button button-primary" href="/products">Browse products</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block page_scripts %}
+<script src="{{ url_for('static', filename='js/wishlist.js') }}"></script>
+{% endblock %}

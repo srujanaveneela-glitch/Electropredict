@@ -1,0 +1,38 @@
+.activity-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .83rem
+}
+
+.activity-table th,
+.activity-table td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid var(--line)
+}
+
+.activity-table th {
+    color: var(--muted);
+    font-size: .72rem;
+    text-transform: uppercase
+}
+
+.event-tag {
+    padding: 5px 7px;
+    border-radius: 99px;
+    background: #eaf1ff;
+    color: var(--blue);
+    font-size: .7rem;
+    font-weight: bold
+}
+
+.research-message {
+    margin-bottom: 22px;
+    padding: 16px;
+    border-radius: 9px;
+    background: #fff7e8;
+    color: #785314;
+    font-size: .84rem;
+    line-height: 1.55;
+    overflow: auto
+}

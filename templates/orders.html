@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Orders | ElectroPredict{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">Purchase history</p>
+        <h1>My orders</h1>
+        <p>Review orders associated with your account.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div id="orders-list">
+            <article class="card order-card">
+                <p>Loading orders...</p>
+            </article>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block page_scripts %}
+<script src="{{ url_for('static', filename='js/orders.js') }}"></script>
+{% endblock %}
